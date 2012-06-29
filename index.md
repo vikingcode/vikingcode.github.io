@@ -1,4 +1,7 @@
 ---
 layout : layout
 ---
-<h1>Never walk away from home ahead of your mouse and keyboard. You can't feel a refactor in your bones or foresee a rebase.</h1>
+{% for post in site.posts limit:1%}
+<h1><a href="{{post.url}}">{{ post.title }}</a></h1>
+{{ post.content }}
+{% endfor %}
