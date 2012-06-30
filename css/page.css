@@ -1,6 +1,6 @@
 body { 
 	margin:0px; padding:0px; font-family: Segoe UI, Helvetica, sans-serif; font-size:0.9em;
-	background :#eaeaea;
+	background :#E8CDA6;/* url('/images/background.png');*/
 }
 section { 
 	width:750px; 
@@ -12,8 +12,8 @@ section {
 }
 nav { width: 250px; float:left; margin-top:50px; }
 nav ul { list-style:none; padding:0px; }
-a, a:visited { text-decoration: none; color: #0066ff;}
-a:hover { text-decoration:underline; color: #bf1111;}
+a, a:visited { text-decoration: none; color: #518F75;}
+a:hover { text-decoration:underline; color: #27B551;}
 #container
 { 
 	margin-top: 20px;
@@ -44,7 +44,7 @@ h1,h2,h3,h4
 	font-family: Segoe UI Light, sans-serif; 
 	font-weight: 100; 
 	margin:0px;
-	color : #bf1111;
+	color : #B57A27;
 }
 
 h1 { font-size: 3em;}
