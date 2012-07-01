@@ -1,17 +1,18 @@
 body { 
 	margin:0px; padding:0px; font-family: Segoe UI, Helvetica, sans-serif; font-size:0.9em;
-	background :#E8CDA6;/* url('/images/background.png');*/
+	background :#;/* url('/images/background.png');*/
 }
 section { 
 	width:750px; 
 	margin-left:270px;
 	padding: 15px;
-	-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .25);
-	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .25);
+	/*-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .25);
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .25);*/
 	background: white;
 }
-nav { width: 250px; float:left; margin-top:50px; }
+nav { width: 250px; float:left; margin-top:-100px; }
 nav ul { list-style:none; padding:0px; }
+nav ul li { margin-bottom:35px; font-weight:bolder; font-size:1.2em; text-align:justify;}
 a, a:visited { text-decoration: none; color: #518F75;}
 a:hover { text-decoration:underline; color: #27B551;}
 #container
@@ -37,7 +38,7 @@ ul {
 	list-style-image: url("/images/bullet.png");
 }
 section li { margin-bottom: 15px; }
-header { font-size: 5em; font-weight: 100;font-family: Segoe UI Light, sans-serif;  }
+header { font-size: 5em; font-weight: 100;font-family: Segoe UI Light, sans-serif; margin-left:285px; margin-bottom:20px; }
 .active { font-weight:bolder; border-left: 2px solid #cacaca; padding-left:5px;}
 h1,h2,h3,h4 
 {
@@ -50,4 +51,4 @@ h1,h2,h3,h4
 h1 { font-size: 3em;}
 h2 { font-size: 2.5em; }
 h3 { font-size: 2em; }
-.tag-h3 {margin-left:20px;}
+.date { font-size:0.8em; color: #5e4338; }

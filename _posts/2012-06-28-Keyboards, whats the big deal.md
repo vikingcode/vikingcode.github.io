@@ -1,5 +1,5 @@
 ---
-title: Keyboards, whats the big deal?
+title: Mechanical keyboards, whats the big deal?
 permalink: "keyboards.html"
 layout : page
 ---
@@ -57,6 +57,15 @@ There isn't actually much competition to the K60 - the only other keyboards I co
 If you want the cheapest option, [CoolerMaster QuickFire Rapid](http://www.coolermaster-usa.com/product.php?product_id=3060) is relatively well respected (in terms of construction and features) and goes for $95-100, depending on which switch you choose (Blue/Black are cheaper than Red). The QuickFire Pro is a *full* keyboard whereas the Rapid is "TKL", and bumps the price to $105-109.
 
 If backlit keys are your vice, Ducky DK9008 range has 13 (possibly more) different models - blue, red, green or white LEDs, with blue, black, red or brown Cherry MX switches.
+
+##The future of mechanical keyboards
+It would be folly to try and predict specifics, but this is what I'm imagining will take place over the course of the next 5 years. 
+
+* Average price for mechanical keyboards will fall to under $100AUD, but still above $50AUD. 
+* Logitech will enter the mech keyboard market with a range of gaming keyboards - a G15 (or is that G19, or G510?) successor (that is, keyboard with a LCD and macro keys) and probably one entry without the LCD. While they'll be late to the party, they'll bring some feature people "must" have, or at least drive prices down further. The design will resemble their existing keyboards, as frankly thats what Logitech loyalists want. 
+* There will probably be a few new entries using the Cherry *ML* switches - they're "low profile" mechanical switches, like laptop keyboards. They're likely to become the most popular, if they're priced right.
+
+What about Microsoft? Well, they've resurrected and killed the Sidewinder brand enough times that I can't really see them committing to building substantial products.
 
 ## Keyboard Primer
 ### Switches
