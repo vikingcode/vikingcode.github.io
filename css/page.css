@@ -51,3 +51,5 @@ h3 { font-size: 2em; }
 .date { font-size:0.8em; color: #5e4338; }
 header img {border:0;}
 header a { border:0;}
+pre, code { overflow: auto; font-size:1.1em; background : #fafafa; border: 1px solid #dadada; }
+pre > code { background : none; border: none; }
