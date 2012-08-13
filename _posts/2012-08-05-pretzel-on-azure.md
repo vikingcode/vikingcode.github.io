@@ -61,7 +61,7 @@ The solution ended up being a two project solution - a class library with nothin
 
 ###Shim.csproj
 
-{% highlight Xml %}
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
