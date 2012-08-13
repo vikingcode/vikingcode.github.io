@@ -69,21 +69,21 @@ While it was a waste of time, I did manage to get significant portions of code c
 
 **FlexibleWebAuthView.xaml**
 {% highlight xml %}
-	<Page
-	    x:Class="FlexibleWebAuth"
-	    IsTabStop="false"
-	    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-	    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-	    mc:Ignorable="d">
-	
-	    <Grid Background="#CA000000" PointerPressed="Cancelled">
-	        <Grid Margin="0,100,0,100" Background="White" PointerPressed="Cancelled">
-	            <WebView HorizontalAlignment="Center" Width="500" VerticalAlignment="Stretch" x:Name="wv" />
-	        </Grid>
-	    </Grid>
-	</Page>
+<Page
+    x:Class="FlexibleWebAuth"
+    IsTabStop="false"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#CA000000" PointerPressed="Cancelled">
+        <Grid Margin="0,100,0,100" Background="White" PointerPressed="Cancelled">
+            <WebView HorizontalAlignment="Center" Width="500" VerticalAlignment="Stretch" x:Name="wv" />
+        </Grid>
+    </Grid>
+</Page>
 {% endhighlight %}
 **FlexibleWebAuthView.xaml.cs**
 
