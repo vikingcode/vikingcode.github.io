@@ -21,25 +21,27 @@ To properly replace `WebAuthenticationBroker`, we need to know what it is first.
 
  It's the `WebView` in that breakdown that causes an issue with its fixed width. To replace the UI (simplistically, there are other things at work), we can do:
  
-            Popup p = new Popup()
-            {
-                HorizontalAlignment = HorizontalAlignment.Stretch,
-                VerticalAlignment = VerticalAlignment.Stretch,
-                Width = Window.Current.Bounds.Width,
-                Height = Window.Current.Bounds.Height
-            };
-            var g = new Grid()
-            {
-                HorizontalAlignment = HorizontalAlignment.Stretch,
-                VerticalAlignment = VerticalAlignment.Stretch,
-                Background = new SolidColorBrush(Colors.Red),
-                Width = Window.Current.Bounds.Width,
-                Height = Window.Current.Bounds.Height
-            };
-            g.Children.Add(new WebView());
-            p.Child = g;
-            p.IsOpen = true;
-            
+ {% highlight csharp %}
+Popup p = new Popup()
+{
+    HorizontalAlignment = HorizontalAlignment.Stretch,
+    VerticalAlignment = VerticalAlignment.Stretch,
+    Width = Window.Current.Bounds.Width,
+    Height = Window.Current.Bounds.Height
+};
+var g = new Grid()
+{
+    HorizontalAlignment = HorizontalAlignment.Stretch,
+    VerticalAlignment = VerticalAlignment.Stretch,
+    Background = new SolidColorBrush(Colors.Red),
+    Width = Window.Current.Bounds.Width,
+    Height = Window.Current.Bounds.Height
+};
+g.Children.Add(new WebView());
+p.Child = g;
+p.IsOpen = true;
+{% endhighlight %}
+
 That'll take up the entire screen, and doesn't need to be "attached" to anything, so it can be called from a view model or a view itself.
 
 ####Code
@@ -84,7 +86,7 @@ While it was a waste of time, I did manage to get significant portions of code c
 	</Page>
 
 **FlexibleWebAuthView.xaml.cs**
-	
+ {% highlight csharp %}
 	using System;
 	using Windows.UI.Xaml;
 	using Windows.UI.Xaml.Navigation;
@@ -124,9 +126,10 @@ While it was a waste of time, I did manage to get significant portions of code c
 			CancelledEvent.Invoke(null, null);
 		}
 	}
+{% endhighlight %}
 
 **FlexibleWebAuthenticationBroker.cs**
-
+ {% highlight csharp %}
 	using System;
 	using System.Threading.Tasks;
 	using Windows.Security.Authentication.Web;
@@ -182,7 +185,8 @@ While it was a waste of time, I did manage to get significant portions of code c
 		public string ResponseData { get; set; }
 		public WebAuthenticationStatus ResponseStatus { get; set; }
 	}
-	
+{% endhighlight %}
+
 **Usage**
 
 	var result = await FlexibleWebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, StartUri, EndUri);
