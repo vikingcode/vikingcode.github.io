@@ -60,45 +60,51 @@ The solution ended up being a two project solution - a class library with nothin
 	EndGlobal
 
 ###Shim.csproj
-	<?xml version="1.0" encoding="utf-8"?>
-	<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	  <PropertyGroup>
-	    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
-	    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-	    <ProductVersion>8.0.30703</ProductVersion>
-	    <SchemaVersion>2.0</SchemaVersion>
-	    <ProjectGuid>{08524E18-F666-4F41-93D5-6AB6D97A58E2}</ProjectGuid>
-	    <OutputType>Library</OutputType>
-	    <AppDesignerFolder>Properties</AppDesignerFolder>
-	    <RootNamespace>Shim</RootNamespace>
-	    <AssemblyName>Shim</AssemblyName>
-	    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-	    <FileAlignment>512</FileAlignment>
-	  </PropertyGroup>
-	  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-	    <DebugType>pdbonly</DebugType>
-	    <Optimize>true</Optimize>
-	    <OutputPath>bin\Release\</OutputPath>
-	    <DefineConstants>TRACE</DefineConstants>
-	    <ErrorReport>prompt</ErrorReport>
-	    <WarningLevel>4</WarningLevel>
-	  </PropertyGroup>
-	  <ItemGroup>
-	    <Reference Include="System.Core" />
-	    <Compile Include="Shim.cs" />
-	    <Content Include="Pretzel.exe" />
-	  </ItemGroup>
-	  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	  <Target Name="AfterBuild">
-	    <Exec Command="pretzel.exe bake -t Razor -d _source" />
-	  </Target>
-	</Project>
-	
+
+{% highlight Xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08524E18-F666-4F41-93D5-6AB6D97A58E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shim</RootNamespace>
+    <AssemblyName>Shim</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Compile Include="Shim.cs" />
+    <Content Include="Pretzel.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <Exec Command="pretzel.exe bake -t Razor -d _source" />
+  </Target>
+</Project>
+{% endhighlight %}
+
 ###Shim.cs	
-	namespace Shim
-	{
-		//Without a CS file in a CSProj, MSBuild will fail throwing CS2008 
-	    class Shim
-	    {
-	    }
-	}
+
+{% highlight csharp %}
+namespace Shim
+{
+	//Without a CS file in a CSProj, MSBuild will fail throwing CS2008 
+    class Shim
+    {
+    }
+}
+{% endhighlight %}
