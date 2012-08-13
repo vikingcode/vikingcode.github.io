@@ -21,7 +21,7 @@ To properly replace `WebAuthenticationBroker`, we need to know what it is first.
 
  It's the `WebView` in that breakdown that causes an issue with its fixed width. To replace the UI (simplistically, there are other things at work), we can do:
  
- {% highlight csharp %}
+{% highlight csharp %}
 Popup p = new Popup()
 {
     HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -68,7 +68,7 @@ While that alone is enough to scrap the idea, the final nail in the coffin is th
 While it was a waste of time, I did manage to get significant portions of code completed for this exercise. This code shouldn't be viewed as... well, it probably shouldn't be viewed, but for prototyping it 'works'. It was meant to be cleaned up, until I hit the killers above.
 
 **FlexibleWebAuthView.xaml**
-
+{% highlight xml %}
 	<Page
 	    x:Class="FlexibleWebAuth"
 	    IsTabStop="false"
@@ -84,107 +84,108 @@ While it was a waste of time, I did manage to get significant portions of code c
 	        </Grid>
 	    </Grid>
 	</Page>
-
+{% endhighlight %}
 **FlexibleWebAuthView.xaml.cs**
- {% highlight csharp %}
-	using System;
-	using Windows.UI.Xaml;
-	using Windows.UI.Xaml.Navigation;
-	
-	public sealed partial class FlexibleWebAuth
+
+{% highlight csharp %}
+using System;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Navigation;
+
+public sealed partial class FlexibleWebAuth
+{
+	public EventHandler CancelledEvent { get; set; }
+	public EventHandler UriChangedEvent { get; set; }
+
+	public FlexibleWebAuth()
 	{
-		public EventHandler CancelledEvent { get; set; }
-		public EventHandler UriChangedEvent { get; set; }
-	
-		public FlexibleWebAuth()
-		{
-			InitializeComponent();
-			Loaded += FlexibleWebAuth_Loaded;
-			wv.LoadCompleted += wv_LoadCompleted;
-		}
-	
-		void wv_LoadCompleted(object sender, NavigationEventArgs e)
-		{
-			//bad code, but 'works' for now
-			if (UriChangedEvent != null)
-				UriChangedEvent.Invoke(e.Uri, null);
-		}
-	
-		void FlexibleWebAuth_Loaded(object sender, RoutedEventArgs e)
-		{
-			wv.Width = Width / 2; //while fixed, would make this work better for 'final'
-		}
-	
-		public void Navigate(Uri uri)
-		{
-			wv.Navigate(uri);
-		}
-	
-		public void Cancelled(object sender, RoutedEventArgs e)
-		{
-			if (CancelledEvent != null)
-			CancelledEvent.Invoke(null, null);
-		}
+		InitializeComponent();
+		Loaded += FlexibleWebAuth_Loaded;
+		wv.LoadCompleted += wv_LoadCompleted;
 	}
+
+	void wv_LoadCompleted(object sender, NavigationEventArgs e)
+	{
+		//bad code, but 'works' for now
+		if (UriChangedEvent != null)
+			UriChangedEvent.Invoke(e.Uri, null);
+	}
+
+	void FlexibleWebAuth_Loaded(object sender, RoutedEventArgs e)
+	{
+		wv.Width = Width / 2; //while fixed, would make this work better for 'final'
+	}
+
+	public void Navigate(Uri uri)
+	{
+		wv.Navigate(uri);
+	}
+
+	public void Cancelled(object sender, RoutedEventArgs e)
+	{
+		if (CancelledEvent != null)
+		CancelledEvent.Invoke(null, null);
+	}
+}
 {% endhighlight %}
 
 **FlexibleWebAuthenticationBroker.cs**
  {% highlight csharp %}
-	using System;
-	using System.Threading.Tasks;
-	using Windows.Security.Authentication.Web;
-	using Windows.UI;
-	using Windows.UI.Xaml;
-	using Windows.UI.Xaml.Controls;
-	using Windows.UI.Xaml.Controls.Primitives;
-	using Windows.UI.Xaml.Media;
+using System;
+using System.Threading.Tasks;
+using Windows.Security.Authentication.Web;
+using Windows.UI;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Media;
 
-	public static class FlexibleWebAuthenticationBroker
+public static class FlexibleWebAuthenticationBroker
+{
+	public static async Task<FlexibleWebAuthenticationResult> AuthenticateAsync(WebAuthenticationOptions options, Uri startUri, Uri endUri)
 	{
-		public static async Task<FlexibleWebAuthenticationResult> AuthenticateAsync(WebAuthenticationOptions options, Uri startUri, Uri endUri)
+		TaskCompletionSource<int> tcs = new TaskCompletionSource<int>();
+
+		Popup p = new Popup
 		{
-			TaskCompletionSource<int> tcs = new TaskCompletionSource<int>();
-	
-			Popup p = new Popup
-			{
-				HorizontalAlignment = HorizontalAlignment.Stretch,
-				VerticalAlignment = VerticalAlignment.Stretch,
-				Width = Window.Current.Bounds.Width,
-				Height = Window.Current.Bounds.Height
-			};
-	
-			var f = new FlexibleWebAuth
-			{
-				Width = Window.Current.Bounds.Width,
-				Height = Window.Current.Bounds.Height
-			};
-			f.CancelledEvent += (s, e) =>
+			HorizontalAlignment = HorizontalAlignment.Stretch,
+			VerticalAlignment = VerticalAlignment.Stretch,
+			Width = Window.Current.Bounds.Width,
+			Height = Window.Current.Bounds.Height
+		};
+
+		var f = new FlexibleWebAuth
+		{
+			Width = Window.Current.Bounds.Width,
+			Height = Window.Current.Bounds.Height
+		};
+		f.CancelledEvent += (s, e) =>
+		{
+			tcs.TrySetResult(1);
+			p.IsOpen = false;
+		};
+
+		f.UriChangedEvent += (s, e) =>
+		{
+			if (((Uri)s).AbsoluteUri.Contains(endUri.AbsoluteUri))
 			{
 				tcs.TrySetResult(1);
 				p.IsOpen = false;
-			};
-	
-			f.UriChangedEvent += (s, e) =>
-			{
-				if (((Uri)s).AbsoluteUri.Contains(endUri.AbsoluteUri))
-				{
-					tcs.TrySetResult(1);
-					p.IsOpen = false;
-				}
-			};
-			p.Child = f;
-			p.IsOpen = true;
-			f.Navigate(startUri);
-			await tcs.Task;
-			return new FlexibleWebAuthenticationResult { ResponseStatus = WebAuthenticationStatus.Success };
-		}
+			}
+		};
+		p.Child = f;
+		p.IsOpen = true;
+		f.Navigate(startUri);
+		await tcs.Task;
+		return new FlexibleWebAuthenticationResult { ResponseStatus = WebAuthenticationStatus.Success };
 	}
-	
-	public class FlexibleWebAuthenticationResult
-	{
-		public string ResponseData { get; set; }
-		public WebAuthenticationStatus ResponseStatus { get; set; }
-	}
+}
+
+public class FlexibleWebAuthenticationResult
+{
+	public string ResponseData { get; set; }
+	public WebAuthenticationStatus ResponseStatus { get; set; }
+}
 {% endhighlight %}
 
 **Usage**
