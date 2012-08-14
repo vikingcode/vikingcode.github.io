@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 ---
 A few times I've had issues wanting to convert Hg to Git. Hg-fast-export is probably the best/fastest way, but on Windows its a pain in the ass.
 
