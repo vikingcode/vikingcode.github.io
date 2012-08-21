@@ -9,7 +9,7 @@ layout: nil
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://vikingco.de/</id>
   <author>
-    <name>Paul</name>
+    <name>Viking</name>
   </author>
 
   {% for post in site.posts limit:10 %}
