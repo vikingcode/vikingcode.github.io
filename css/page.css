@@ -55,7 +55,7 @@ header a { border:0;}
 pre, code { overflow: auto; font-size:1em; background : #fafafa; border: 1px solid #dadada; }
 pre > code { background : none; border: none; }
 .highlight pre { background : none; border:none;}
-.highlight { background-color: #ffffcc; padding:5px; border: 1px solid #dadada}
+.highlight { background-color: #fdf6e3; padding:5px; border: 1px solid #dadada}
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
 .highlight .g { color: #93A1A1 } /* Generic */
