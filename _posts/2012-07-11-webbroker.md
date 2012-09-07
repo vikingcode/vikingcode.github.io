@@ -68,6 +68,7 @@ While that alone is enough to scrap the idea, the final nail in the coffin is th
 While it was a waste of time, I did manage to get significant portions of code completed for this exercise. This code shouldn't be viewed as... well, it probably shouldn't be viewed, but for prototyping it 'works'. It was meant to be cleaned up, until I hit the killers above.
 
 **FlexibleWebAuthView.xaml**
+
 {% highlight xml %}
 <Page
     x:Class="FlexibleWebAuth"
@@ -85,6 +86,7 @@ While it was a waste of time, I did manage to get significant portions of code c
     </Grid>
 </Page>
 {% endhighlight %}
+
 **FlexibleWebAuthView.xaml.cs**
 
 {% highlight csharp %}
@@ -130,6 +132,7 @@ public sealed partial class FlexibleWebAuth
 {% endhighlight %}
 
 **FlexibleWebAuthenticationBroker.cs**
+
  {% highlight csharp %}
 using System;
 using System.Threading.Tasks;
