@@ -8,7 +8,7 @@ In WPF-land, getting access to the list of system installed fonts is trivial - `
 
 ##List of fonts
 
-```
+{% highlight csharp %}
 var x = new List<YarrFontFamily>();
 var factory = new Factory();
 var fontCollection = factory.GetSystemFontCollection(false);
@@ -33,7 +33,7 @@ for (int i = 0; i < familyCount; i++)
     }
     x.Add(internalFont);
 }
-```
+{% endhighlight %}
 
 `YarrFontFamily` and `YarrFont` aren't overly interesting - they're just containers returning properties so XAML can bind properly. If you're super interested, they're up on [GitHub](https://github.com/vikingcode/yarrmaprt).
 
@@ -41,18 +41,18 @@ That will collect all of the fonts and their *variations*. The variations are im
 
 Once you have the string information, you can just use that inside regular databinding in WinRT
 
-```
+{% highlight xml %}
 <TextBlock FontFamily="{Binding ElementName=fonts, Path=SelectedItem.Name}" 
 		Text="{Binding ElementName=example, Path=Text}" 
 		FontWeight="{Binding Weight}" 
 		FontStyle="{Binding Style}"
 		FontStretch="{Binding Stretch}"  />
-```
+{% endhighlight %}
 
 ##List of characters
 .NET has `CharacterToGlyphMap` on the `GlyphTypeFace` object, which gives you all the unicode values a particular type has. Unfortunately DirectWrite doesn't have that capability, and the recommended way to do it is to loop over `HasCharacter`
 
-```
+{% highlight csharp %}
 var characters = new List<string>();
 var count = 65000; //what should this value be?
 for (var i = 0; i < count; i++)
@@ -62,6 +62,6 @@ for (var i = 0; i < count; i++)
         characters.Add(char.ConvertFromUtf32(i));
     }
 }
-```
+{% endhighlight %}
 
 I've chosen an arbitrary number, 65000, as I'm not sure what a good 'maximum' number is .Technically Unicode goes up to 1114111, although I'm not aware of any fonts/characters that are that high.
