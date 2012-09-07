@@ -64,4 +64,4 @@ for (var i = 0; i < count; i++)
 }
 {% endhighlight %}
 
-I've chosen an arbitrary number, 65000, as I'm not sure what a good 'maximum' number is .Technically Unicode goes up to 1114111, although I'm not aware of any fonts/characters that are that high.
+I've chosen an arbitrary number, 65000, as I'm not sure what a good 'maximum' number is. Technically Unicode goes up to 1114111, although I'm not aware of any fonts/characters that are that high.
