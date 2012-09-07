@@ -4,6 +4,8 @@ title: Getting a list of all fonts on the system in WinRT
 date: 2012-09-07 09:35:05 +10:00
 ---
 
+> GH-Pages is messing stuff up, code blocks may/may not appear
+
 In WPF-land, getting access to the list of system installed fonts is trivial - `System.Windows.Media.Fonts.SystemFontFamilies` - so trivial you could bind directly to that in XAML. Things are a little different in WinRT/Windows 8 - `System.Windows.Media` doesn't exist, and there isn't a `Windows.` namespace to deal with fonts. Instead, you need to use DirectWrite. While that may sound scary at first, SharpDx makes it trivial.
 
 ##List of fonts
