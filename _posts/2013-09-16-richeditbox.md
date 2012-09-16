@@ -2,7 +2,7 @@
 layout: page
 published: true
 title: Actually setting RichEditBox RightTapped
-date: 2012-09-10
+date: 2012-09-16
 ---
 
 Somebody deemed it very clever that RichEditBox and TextBox would have the `RightTapped` event settable in XAML but not have it actually wire up to anything. This causes issues when you want to bring up the appbar on right click - standard Windows 8 behaviour.
