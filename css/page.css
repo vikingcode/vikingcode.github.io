@@ -4,7 +4,7 @@ body {
 	background: white;
 }
 section { 
-	width:750px; 
+	max-width:750px; 
 	margin-left:270px;
 	padding: 15px;
 	background: white;
@@ -19,7 +19,7 @@ a:hover { text-decoration:underline; color: #27B551;}
 	margin-top: 20px;
 	margin-left:auto;
 	margin-right:auto;
-	width: 970px;
+	max-width: 970px;
 }
 .footnotes { }
 .footnotes p { display:inline; }
@@ -124,3 +124,17 @@ pre > code { background : none; border: none; }
 .highlight .vg { color: #268BD2 } /* Name.Variable.Global */
 .highlight .vi { color: #268BD2 } /* Name.Variable.Instance */
 .highlight .il { color: #2AA198 } /* Literal.Number.Integer.Long */
+
+
+
+@media all and (max-width: 650px){
+	nav { width: 150px; float:left; }
+	section { margin-left: 150px; }
+	header img {max-width:100%;} 
+}
+
+@media all and (max-width: 480px){
+	nav { margin-left:10px; float:none; }
+	section { margin-left: 0px; }
+	header img {max-width:100%;} 
+}
