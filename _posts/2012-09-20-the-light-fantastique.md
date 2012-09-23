@@ -40,7 +40,7 @@ This is a *really* simple hardware project - three wires and you're done.
 Wire has to be used, the pins are a little bit too far apart to be useful, but very short cables will probably work best.
 
 ####Finished Result
-<INSERT IMAGES HERE>
+#INSERT IMAGES HERE
 
 
 ###Software ('Sketch' for the Arduino)
