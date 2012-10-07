@@ -1,17 +1,17 @@
 body { 
 	margin:0px; padding:0px; font-family: Segoe UI, Helvetica, sans-serif; font-size:1em;
 	color: #333;
-	background: white;
+	background: #f5f5f5;
 }
 section { 
-	max-width:750px; 
-	margin-left:270px;
+	margin-left:170px;
 	padding: 15px;
 	background: white;
 }
-nav { width: 250px; float:left; }
+nav { width: 150px; float:left; }
 nav ul { list-style:none; padding:0px; }
 nav ul li { margin-bottom:35px; font-weight:bolder; font-size:1em; }
+header img {max-width:100%;} 
 a, a:visited { text-decoration: none; color: #518F75;}
 a:hover { text-decoration:underline; color: #27B551;}
 #container
@@ -19,7 +19,7 @@ a:hover { text-decoration:underline; color: #27B551;}
 	margin-top: 20px;
 	margin-left:auto;
 	margin-right:auto;
-	max-width: 970px;
+	max-width: 1120px;
 }
 .footnotes { }
 .footnotes p { display:inline; }
@@ -46,9 +46,9 @@ h1,h2,h3,h4
 	color : #B57A27;
 }
 
-h1 { font-size: 3em;}
-h2 { font-size: 2.5em; }
-h3 { font-size: 2em; }
+h1 { font-size: 2.5em; line-height:1em;}
+h2 { font-size: 2em; line-height:1em; }
+h3 { font-size: 1.5em; line-height:1em;}
 .date { font-size:0.8em; color: #5e4338; }
 header img {border:0;}
 header a { border:0;}
@@ -130,7 +130,7 @@ pre > code { background : none; border: none; }
 @media all and (max-width: 650px){
 	nav { width: 150px; float:left; }
 	section { margin-left: 150px; }
-	header img {max-width:100%;} 
+	
 }
 
 @media all and (max-width: 480px){
