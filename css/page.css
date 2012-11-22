@@ -6,12 +6,13 @@ body {
 section { 
 	margin-left:170px;
 	padding: 15px;
-	background: white;
+	background:white;
 }
 nav { width: 150px; float:left; }
 nav ul { list-style:none; padding:0px; }
 nav ul li { margin-bottom:35px; font-weight:bolder; font-size:1em; }
 header img {max-width:100%;} 
+img {max-width:100%;} 
 a, a:visited { text-decoration: none; color: #518F75;}
 a:hover { text-decoration:underline; color: #27B551;}
 #container
@@ -33,11 +34,12 @@ blockquote {
 }
 blockquote p { }
 
-ul {
-	list-style-image: url("/images/bullet.png");
-}
+ul { list-style-image: url("/images/bullet.png");}
+#archive  { list-style: none; margin:0; padding:0;}
+
 section li { margin-bottom: 15px; }
 .active { font-weight:bolder; border-left: 2px solid #cacaca; padding-left:5px;}
+
 h1,h2,h3,h4 
 {
 	font-family: Segoe UI Light, sans-serif; 
@@ -45,10 +47,10 @@ h1,h2,h3,h4
 	margin:0px;
 	color : #B57A27;
 }
-
-h1 { font-size: 2.5em; line-height:1em;}
-h2 { font-size: 2em; line-height:1em; }
-h3 { font-size: 1.5em; line-height:1em;}
+.fullimagewrapper { margin-left:-15px; margin-right:-15px;}
+h1 { font-size: 2.5em; line-height:1.75em;}
+h2 { font-size: 2em; line-height:1.5em; }
+h3 { font-size: 1.75em; line-height:1.5em;}
 .date { font-size:0.8em; color: #5e4338; }
 header img {border:0;}
 header a { border:0;}

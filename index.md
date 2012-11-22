@@ -7,11 +7,11 @@ layout : layout
 {% endfor %}
 
 <h3>Older posts</h3>
-<ul>
+<ul id="archive">
 {% for post in site.posts offset:1 %}
 	<li>
-		<a href="{{post.url}}">{{ post.title  |upcase }}</a>
-		<div class="date">{{post.date | date: "%d %B"  }}</div>
+		<h3><a href="{{post.url}}">{{ post.title }}</a></h3>
+		<div class="date">{{post.date | date: "%d %B %Y"  }}</div>
 	</li>
 {% endfor %}
 </ul>
