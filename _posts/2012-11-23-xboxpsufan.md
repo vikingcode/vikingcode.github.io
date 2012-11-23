@@ -30,7 +30,7 @@ The only [60mm fan](http://www.pccasegear.com/index.php?main_page=product_info&c
 If you checked out the Xbox-Scene mod, you'll notice the 60mm fits nearly perfectly on top of the PSU, so a circle just needed to be cut out for it to work. With 80mm, mounting it like that would have resulted in a lot of air being blown around the PSU, rather than into it. Instead, I cut a square into the PSU casing, so that the fan is slotted into it. This means the 80mm actually fit in a bit lower than the 60mm, and is remarkably secure despite no adhesives (I do plan to add some glue down the track)
 
 **Cutting**  
-The easiest way is with a Dremel, I'm sure other cutting implements would work too. Measure whatever fan you're going to be using - in my case, 60mm - and tape off a section to be cut. Tape is a great way to mark the plastic that won't easily be covered by the fine dust that a Dremel produces when cutting plastic.
+The easiest way is with a Dremel, I'm sure other cutting implements would work too. Measure whatever fan you're going to be using - in my case, 80mm - and tape off a section to be cut. Tape is a great way to mark the plastic that won't easily be covered by the fine dust that a Dremel produces when cutting plastic.
  
 ![](images/postimages/IMG_9510.jpg)
 
