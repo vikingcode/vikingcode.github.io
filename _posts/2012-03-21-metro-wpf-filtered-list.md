@@ -17,7 +17,7 @@ The Windows 8 "search" screen looks like this
 As this was a request for [MahApps.Metro](http://github.com/mahapps/mahpps.metro), it makes sense to start there and install it via nuget.
 
 ####MainWindow.xaml
-
+```xml
 	<Controls:MetroWindow x:Class="FilteringDemo.MainWindow"
 	        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -62,7 +62,7 @@ As this was a request for [MahApps.Metro](http://github.com/mahapps/mahpps.metro
 	        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165.6,40.653,0,0" FontWeight="Light" FontSize="18.667"><Run Language="en-au" Text="Results for &quot;w&quot;"/></TextBlock>
 	    </Grid>
 	</Controls:MetroWindow>
-
+```
 This gives us the nice UI we need and looks like  
 ![](images/postimages/filtering_2.png)
 
@@ -72,7 +72,7 @@ This gives us the nice UI we need and looks like
 Using filtering on a `CollectionViewSource` is the easiest way to filter in the various XAML frameworks, and for ten, twenty or even thirty objects can be fine. Once you start getting above that though, everything starts to come to a bit of a stand still. Specifically, the UI thread is blocked every time you filter. 
 
 ####MainWindow.xaml.cs
-
+```csharp
     public partial class MainWindow
     {
         public ObservableCollection<AppThing> Apps { get; set; }
@@ -111,7 +111,7 @@ Using filtering on a `CollectionViewSource` is the easiest way to filter in the 
             e.Accepted = ((AppThing) e.Item).Name.ToLowerInvariant().Contains(txtSearch.Text.ToLowerInvariant());
         }
     }
-
+```
 
 In this scenario, we're searching every time the search `TextBox` is changed (`TextChanged` event). If we don't update on every keystroke, but instead on a timer of ~500ms after the last change, performance increases dramatically, but it's still a UI thread operation. As it is, this example is pretty fast. Increase the list of apps to 50, and all of a sudden there is a one or two second pause on each key stroke.
 
@@ -120,136 +120,136 @@ In this scenario, we're searching every time the search `TextBox` is changed (`T
 [Derek Lakin](https://twitter.com/#!/dereklakin) quickly threw together a sample that I've adapted, which uses a very simple ViewModel for the data and a background worker to perform the actual filtering. This works by keeping a list of all items in ListA, binding to ListB, performing the filtering on a different thread, then clearing and updating ListB.
 
 ####ViewModel.cs
+```csharp
+public class ViewModel
+{
+	public ObservableCollection<AppThing> Results { get; set; }
+	
+	public string Query
+	{
+		get { return _query; }
+		set
+		{
+			_query = value;
+			BeginFilter(value.ToLowerInvariant());
+		}
+	}
 
-    public class ViewModel
-    {
-        public ObservableCollection<AppThing> Results { get; set; }
-        
-        public string Query
-        {
-            get { return _query; }
-            set
-            {
-                _query = value;
-                BeginFilter(value.ToLowerInvariant());
-            }
-        }
+	private string _query = string.Empty;
+	private readonly List<AppThing> _apps;
+	private readonly BackgroundWorker _worker;
 
-        private string _query = string.Empty;
-        private readonly List<AppThing> _apps;
-        private readonly BackgroundWorker _worker;
+	public ViewModel(IEnumerable<AppThing> list)
+	{
+		_apps = new List<AppThing>(list);
+		Results = new ObservableCollection<AppThing>(_apps);
+		_worker = new BackgroundWorker
+					  {
+						  WorkerSupportsCancellation = true
+					  };
+		_worker.DoWork += Filter;
+		_worker.RunWorkerCompleted += FilterComplete;
+	}
 
-        public ViewModel(IEnumerable<AppThing> list)
-        {
-            _apps = new List<AppThing>(list);
-            Results = new ObservableCollection<AppThing>(_apps);
-            _worker = new BackgroundWorker
-                          {
-                              WorkerSupportsCancellation = true
-                          };
-            _worker.DoWork += Filter;
-            _worker.RunWorkerCompleted += FilterComplete;
-        }
+	private void Filter(object sender, DoWorkEventArgs e)
+	{
+		 var query = (string)e.Argument;
+	e.Result = string.IsNullOrWhiteSpace(query) ? _apps : _apps.Where(a => a.Name.ToLowerInvariant().Contains(query));
+	}
 
-        private void Filter(object sender, DoWorkEventArgs e)
-        {
-             var query = (string)e.Argument;
-		e.Result = string.IsNullOrWhiteSpace(query) ? _apps : _apps.Where(a => a.Name.ToLowerInvariant().Contains(query));
-        }
+	private void FilterComplete(object sender, RunWorkerCompletedEventArgs e)
+	{
+		if (e.Cancelled) 
+			return;
 
-        private void FilterComplete(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Cancelled) 
-                return;
+		var filtered = (IEnumerable<AppThing>)e.Result;
+		Results.Clear();
 
-            var filtered = (IEnumerable<AppThing>)e.Result;
-            Results.Clear();
+		foreach (var f in filtered)
+			Results.Add(f);
+	}
 
-            foreach (var f in filtered)
-                Results.Add(f);
-        }
-
-        private void RefilterOnCompletion(object sender, RunWorkerCompletedEventArgs e)
-        {
-            _worker.RunWorkerCompleted -= RefilterOnCompletion;
-            _worker.RunWorkerAsync(_query.ToLowerInvariant());
-        }
+	private void RefilterOnCompletion(object sender, RunWorkerCompletedEventArgs e)
+	{
+		_worker.RunWorkerCompleted -= RefilterOnCompletion;
+		_worker.RunWorkerAsync(_query.ToLowerInvariant());
+	}
 
 
-        private void BeginFilter(string filterText)
-        {
-            if (_worker.IsBusy)
-            {
-                if (!_worker.CancellationPending)
-                {
-                    _worker.RunWorkerCompleted += RefilterOnCompletion;
-                    _worker.CancelAsync();
-                }
-            }
-            else
-            {
-                _worker.RunWorkerAsync(filterText.ToLowerInvariant());
-            }
-        }
-    }
-
+	private void BeginFilter(string filterText)
+	{
+		if (_worker.IsBusy)
+		{
+			if (!_worker.CancellationPending)
+			{
+				_worker.RunWorkerCompleted += RefilterOnCompletion;
+				_worker.CancelAsync();
+			}
+		}
+		else
+		{
+			_worker.RunWorkerAsync(filterText.ToLowerInvariant());
+		}
+	}
+}
+```
 ####MainWindow.xaml.cs
 If I had of set up the ViewModel properly the TextChanged event handler wouldn't be required, and you could just use a `{Binding Query}`. For the sake of this demo, it isn't needed.
+```csharp
+public partial class MainWindow
+{
+	private ViewModel vm;
+	public MainWindow()
+	{
+		InitializeComponent();
+		Apps = new ObservableCollection<AppThing> { /* apps */ };
 
-    public partial class MainWindow
-    {
-        private ViewModel vm;
-        public MainWindow()
-        {
-            InitializeComponent();
-            Apps = new ObservableCollection<AppThing> { /* apps */ };
+		vm = new ViewModel(Apps);
+		DataContext = vm;
+	}
 
-            vm = new ViewModel(Apps);
-            DataContext = vm;
-        }
-
-        private void TxtSearchTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-            vm.Query = txtSearch.Text;
-        }
-    }
-
+	private void TxtSearchTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+	{
+		vm.Query = txtSearch.Text;
+	}
+}
+```
 And finally changing the XAML to use `Results`
-
+```xml
 	<ListBox Margin="33,88,8,8" BorderBrush="{x:Null}" ItemsSource="{Binding Results}"..
-	
+```	
 ###Delayed binding
 As I mentioned earlier, "delayed bindings" - that is delaying the `TextChanged` event from triggering a filter until after user input as finished. .NET 4.5 specifically has `Delay` as a property on a binding, but until that is mainstream a similar effect can be achieved with a timer.
-	
-    public partial class MainWindow
-    {
-        public ObservableCollection<AppThing> Apps { get; set; }
-        private ViewModel vm;
-        private DispatcherTimer _t;
-        public MainWindow()
-        {
-            InitializeComponent();
-            Apps = new ObservableCollection<AppThing> { /* apps */ };
+```csharp	
+public partial class MainWindow
+{
+	public ObservableCollection<AppThing> Apps { get; set; }
+	private ViewModel vm;
+	private DispatcherTimer _t;
+	public MainWindow()
+	{
+		InitializeComponent();
+		Apps = new ObservableCollection<AppThing> { /* apps */ };
 
-            vm = new ViewModel(Apps);
-            DataContext = vm;
-            
-            _t = new DispatcherTimer(TimeSpan.FromMilliseconds(300), DispatcherPriority.DataBind, Search, Dispatcher) { IsEnabled = false };
-        }
+		vm = new ViewModel(Apps);
+		DataContext = vm;
+		
+		_t = new DispatcherTimer(TimeSpan.FromMilliseconds(300), DispatcherPriority.DataBind, Search, Dispatcher) { IsEnabled = false };
+	}
 
-        private void Search(object sender, EventArgs e)
-        {
-	      _t.Stop();
-            vm.Query = txtSearch.Text;
-        }
+	private void Search(object sender, EventArgs e)
+	{
+	  _t.Stop();
+		vm.Query = txtSearch.Text;
+	}
 
-        private void TxtSearchTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-            _t.Stop();
-            _t.Start();
-        }
-    }
-    
+	private void TxtSearchTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+	{
+		_t.Stop();
+		_t.Start();
+	}
+}
+```    
 Every time the user inputs text, the timer is restarted. While the background thread method benefits from it, the real winner is the `CollectionViewSource` filtering which becomes much more usable.
 
 ###Complex filtering
