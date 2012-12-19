@@ -7,7 +7,7 @@ date: 2008-06-10 14:00:00 +10:00
 tags: "buildingwhs case whs "
 comments: true
 ---
-<img src="http://images.theleagueofpaul.com/postimages//windows-home-server-logo.png" alt=""></p>
+<img src="http://images.theleagueofpaul.com/postimages//windows-home-server-logo.png" alt="" />
 <p>It's been a month since <a href="/build-a-whs-part1.html">part one (CPU+Motherboard),</a> and I must admit the comments didn't help me choose at all! Why? The comments didn't lean one way or another.</p>
 <p>I've decided in the end to go with an Intel E1200 and <a href="http://tw.giga-byte.com/Products/Motherboard/Products_Overview.aspx?ClassValue=Motherboard&amp;ProductID=2693&amp;ProductName=GA-G31M-S2L">Gigabyte GA-G31M-S2L</a>. Despite renewed searching for AMD power usage including the Semprons, the E1200 still seemed to have the edge <span style="font-size: xx-small;">(especially when you factor in pricing and availability)</span>. The difference in power at this end of the spectrum is pretty low - more power will be wasted by an inefficient PSU than an inefficient low end CPU.</p>
 <p>This means going with the current market prices, the CPU is $50 and motherboard $70, meaning there is a healthy $480 in the budget for case, power supply, hard drive(s) and any third party cooling required.</p>

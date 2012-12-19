@@ -18,7 +18,7 @@ And now for some interesting numbers... I recently purchased a power meter, it p
 Computer 	Watt
 (Off/plugged in) 	Watt
 (Sleep) 	Watt
-(Light load) 	Cost to run/day*
+(Light load) 	Cost to run/day
 Original HTPC (S939 based) 	12w 	14w 	120w 	24.12c ($88.03/Year)
 (0.168 + 1.44 = 1.608 kW)
 New/My HTPC (LGA775 based) 	12w 	12w 	63w 	13.5c ($49.27/Year)
@@ -26,7 +26,7 @@ New/My HTPC (LGA775 based) 	12w 	12w 	63w 	13.5c ($49.27/Year)
 Mums HTPC (AM2 based) 	12w 	12w 	80w 	16.56c ($60.44/Year)
 (0.144kw + 0.96 = 1.104 kW)
 
-*Assuming 12 hours a day sleep, 12 hours in use (remember, it does music too!), and that 1 kWh costs 15c. Your mileage will vary.
+Assuming 12 hours a day sleep, 12 hours in use (remember, it does music too!), and that 1 kWh costs 15c. Your mileage will vary.
 
 Price:performance, the AM2 system probably wins (since the measurement of performance in a HTPC in this situation is a binary 'does it play back 1080p content or not'), but performance:watt Intel wins hands down. I'd be really interested to get some readings from AMD's "BE" range of low power consumption CPU's.
 
@@ -34,7 +34,7 @@ Sleep/standby mode on the two new systems uses the same amount of power that the
 
 If you end up buying the parts I have, or similar, remember to make sure you set in bios (or for my motherboard, set jumpers, see the manual details) the option to wake from S3/S4 via USB. This means you can wake up the computer using the Media Center remote, by pressing the On/Off button. It becomes a whole lot more usable when you don't have to get off the couch to turn it on!
 
-Another thing to note is that for Australian users, there is no Electronic Program Guide (EPG) for Windows Vista that just "works" out of the box, due to the networks not making it freely/easily available. However, Nick Hodge recommended Free*EPG, which I finally got around to installing on mums HTPC yesterday. Her reaction was "Wow, that's awesome", and she gave me permission to give Nick a hug on her behalf, just before she queued up two shows to record that night.
+Another thing to note is that for Australian users, there is no Electronic Program Guide (EPG) for Windows Vista that just "works" out of the box, due to the networks not making it freely/easily available. However, Nick Hodge recommended FreeEPG, which I finally got around to installing on mums HTPC yesterday. Her reaction was "Wow, that's awesome", and she gave me permission to give Nick a hug on her behalf, just before she queued up two shows to record that night. 
 
 Windows Media Center: Making mums happy.
 
