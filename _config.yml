@@ -1,3 +1,4 @@
 permalink: /:title.html
-auto: false
-markdown: kramdown
+safe: true
+timezone: Australia/Melbourne
+markdown: redcarpet

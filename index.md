@@ -105,10 +105,10 @@ Heimdall takes care of managing license keys by importing MSDN's exported XML an
 <h2>Blog Posts</h2>
 <ul id="archive">
 {% for post in site.posts  %}
-	<li style="border-bottom: 1px solid #f5f5f5;">
-		<div class="post_list_title"><a href="{{post.url}}">{{ post.title }}</a></div>
-		<div class="post_list_date">	{{post.date | date: "%d %B %Y"  }}</div>
-		<div style="clear:both"></div>
-	</li>
+<li style="border-bottom: 1px solid #f5f5f5;">
+	<div class="post_list_title"><a href="{{post.url}}">{{ post.title }}</a></div>
+	<div class="post_list_date">	{{post.date | date: "%d %B %Y"  }}</div>
+	<div style="clear:both"></div>
+</li>
 {% endfor %}
 </ul>
