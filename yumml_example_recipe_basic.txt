@@ -1,0 +1,54 @@
+name: Mrs Fields Choc-Chip Cookies
+date: 2011-09-21
+time: 25 minutes
+ingredient:
+    - qty : 2.5
+      unit: cups
+      item: plain flour
+
+    - qty : .5 
+      unit: tsp 
+      item: bi-carb of soda
+
+    - qty : .25  
+      unit: tsp 
+      item: salt
+
+    - qty : .75 
+      unit: cup 
+      item: dark brown sugar
+
+    - qty : .5
+      unit: cup
+      item: white sugar 
+
+    - qty : .5
+      unit: cup
+      item: margarine
+
+    - qty : 3
+      unit: large
+      item: egg whites
+
+    - qty : 2
+      unit: tsp
+      item: vanilla
+
+    - qty : 3 
+      unit: cups
+      item: choc chips
+
+    - qty : 2 
+      unit: tbs
+      item: Golden Syrup
+
+method:
+    - step: Mix flour, bi-carb soda, and salt in a large bowl
+    - step: Blend sugars with electric mixer, add margarine to form a grainy paste
+    - step: In a small bowl, beat egg whites until fluffy
+    - step: Add egg, Golden Syrup and vanilla to sugar mixture, stir until smooth.
+    - step: Add to flour mix and mix in choc chips
+    - step: Blend on low speed until all combined
+    - step: Bake on ungreased trays for 18-20 minutes at 160C
+    - step: Transfer to cooling tray straight away.
+      image: finishedproduct.jpg

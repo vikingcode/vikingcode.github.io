@@ -113,7 +113,7 @@ There isn't a central repository of YumML recipe's just yet - if there is any in
   [3]: http://www.formatdata.com/recipeml/spec/recipeml-spec.html
   [4]: http://www.kalorio.de/index.php?Mod=Ac&Cap=CE&SCa=../cml/CookML_EN
   [5]: http://www.happy-monkey.net/recipebook/
-  [6]: /yumml
+  [6]: /yumml.html
   [7]: http://www.cookingforengineers.com/
   [8]: /yumml_example_recipe_basic.txt
   [9]: /yumml_example_recipe_extended.txt
