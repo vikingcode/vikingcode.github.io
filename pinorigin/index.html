@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PinOrigin</title>
+    <style>
+        body { font-family : 'Segoe UI', sans-serif;
+               font-weight: lighter;
+               margin:0;
+               padding:0;
+               background: url('background.png') repeat-x top;
+        }
+        a, a:visited { text-decoration:none;}
+        h1, h3 {
+            font-weight: 100;
+            font-family: 'Segoe UI Light', 'Segoe UI', sans-serif;
+        }
+        h3 { font-size:2.5em; margin-top:0;}
+        h1 {
+            font-size: 5em;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-weight: 100;
+        }
+        #faq { margin-top:150px;}
+        #container {margin-left: auto; margin-right:auto; width:800px; margin-bottom:50px;
+        }
+        #header{margin-top:40px;background:url('tablet.png') no-repeat; width:887px; height:344px;}
+        .blockbutton, .blockbutton:visited {
+            line-height: 3em;
+            display: inline-block;
+            height: 50px;
+            width: 300px;
+            color: white;
+            background-color: #f05a22;
+        }
+
+            .blockbutton:hover {
+                background-color: #ff793f;
+            }
+
+        .blockbutton_icon {
+            margin-left: 15px;
+            display: inline;
+            margin-bottom: -5px;
+        }
+
+            .blockbutton_icon img {
+                margin-bottom: -15px;
+            }
+
+        .blockbutton_text {
+            margin-left: 15px;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header"></div>
+        <div id="content">
+            <h1><img src="logo.png" />PinOrigin</h1>
+            <h3>The best way to get all your games on display</h3>
+            <a class="blockbutton" href="http://apps.microsoft.com/webpdp/en-us/app/3403c128-a58a-40e4-a122-9e3672d6a64a">
+                <div class="blockbutton_icon"><img src="store.png"></div>
+                <div class="blockbutton_text">download</div>
+            </a>
+            <div id="faq">
+                <h4>But my favourite game, <em>Super Sparkly Ponies 3</em> isn't there!</h4>
+                Unfortunately EA don't make their database available to the public like Valve do with Steam. This results in a limited selection of games - namely that which I have access to.<br />
+
+                <h4>Seriously though, get <em>Super Sparkly Ponies 3</em> available or I'm not paying for this free app!</h4>
+                If you can get me the <em>content id</em> for a game, I'll happily add it in.<br /><br />
+
+                The method I used was to snoop the HTTPS requests using Fiddler, then launched Origin. the "entitlements" request returns XML of all the games you've got access to. From that, you want the <em>contentId</em>.<br /><br />
+
+                I used XPath roughly along the lines of <br />
+                <code>/entitlements/entitlement/offer/publishing/publishingAttributes/contentId</code><br /><br />
+
+                You can  verify that by launching the game from 'Run' (Windows Key + R), typing in <code>origin://LaunchGame/</code> and then the <em>contentId</em> you found. ie, <code>origin://LaunchGame/1010268</code> is Battlefield 4.
+
+                Send me the ID via Twitter (<a href="https://twitter.com/vikingcode">@vikingcode</a>) and I'll add it in.</div>
+        </div>
+    </div>
+</body>
+</html>

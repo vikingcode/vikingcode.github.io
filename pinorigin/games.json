@@ -1,0 +1,139 @@
+[  {
+    "Name": "Mirror's Edge™",
+    "LaunchId": "mirrors_edge_na",
+    "ImageUri": "http://vikingco.de/pinorigin/mirrors_edge_na.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Medal of Honor™",
+    "LaunchId": "moh_dd",
+    "ImageUri": "http://vikingco.de/pinorigin/moh_dd.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Crysis® 2 Maximum Edition",
+    "LaunchId": "71645",
+    "ImageUri": "http://vikingco.de/pinorigin/71645.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Dead Space™",
+    "LaunchId": "deadspace_na",
+    "ImageUri": "http://vikingco.de/pinorigin/deadspace_na.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Command & Conquer™ 4 Tiberian Twilight",
+    "LaunchId": "1001307",
+    "ImageUri": "http://vikingco.de/pinorigin/1001307.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Command & Conquer™ Red Alert™ 3 and Uprising",
+    "LaunchId": "1001986",
+    "ImageUri": "http://vikingco.de/pinorigin/1001986.png",
+    "HasWide": false
+  },
+  {
+    "Name": "Command & Conquer™ 3 Tiberium Wars™ and Kane’s Wrath",
+    "LaunchId": "1001988",
+    "ImageUri": "http://vikingco.de/pinorigin/1001988.png",
+    "HasWide": false
+  },
+  {
+    "Name": "Command & Conquer™ Generals and Zero Hour",
+    "LaunchId": "1001303",
+    "ImageUri": "http://vikingco.de/pinorigin/1001303.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Command & Conquer Renegade™",
+    "LaunchId": "1001302",
+    "ImageUri": "http://vikingco.de/pinorigin/1001302.png",
+    "HasWide": false
+  },
+  {
+    "Name": "Command & Conquer Red Alert™ 2 and Yuri’s Revenge™",
+    "LaunchId": "1001298",
+    "ImageUri": "http://vikingco.de/pinorigin/1001298.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Command & Conquer™ Tiberian Sun™ and Firestorm™",
+    "LaunchId": "1001294",
+    "ImageUri": "http://vikingco.de/pinorigin/1001294.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Command & Conquer Red Alert™, Counterstrike™ and The Aftermath™",
+    "LaunchId": "1001287",
+    "ImageUri": "http://vikingco.de/pinorigin/1001287.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Command & Conquer™ and The Covert Operations™",
+    "LaunchId": "1001278",
+    "ImageUri": "http://vikingco.de/pinorigin/1001278.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Dead Space™ 3",
+    "LaunchId": "71762",
+    "ImageUri": "http://vikingco.de/pinorigin/71762.png",
+    "HasWide": true
+  },
+  {
+    "Name": "SimCity™ Limited Edition",
+    "LaunchId": "1008762",
+    "ImageUri": "http://vikingco.de/pinorigin/1008762.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Battlefield 1942™",
+    "LaunchId": "1004264",
+    "ImageUri": "http://vikingco.de/pinorigin/1004264.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Battlefield 3™ Limited Edition",
+    "LaunchId": "71067",
+    "ImageUri": "http://vikingco.de/pinorigin/71067.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Battlefield: Bad Company 2 Digital Deluxe Edition",
+    "LaunchId": "bfbc2_le",
+    "ImageUri": "http://vikingco.de/pinorigin/bfbc2_le.png",
+    "HasWide": true
+  },
+{
+    "Name": "Burnout™ Paradise: The Ultimate Box",
+    "LaunchId": "bpparty_dd",
+    "ImageUri": "http://vikingco.de/pinorigin/bpparty_dd.png",
+    "HasWide": true
+  },
+  {
+    "Name": "The Sims™ 3",
+    "LaunchId": "1002441",
+    "ImageUri": "http://vikingco.de/pinorigin/1002441.png",
+    "HasWide": true
+  },
+  {
+    "Name": "SimCity™ 4 Deluxe Edition",
+    "LaunchId": "simcity4_dd",
+    "ImageUri": "http://vikingco.de/pinorigin/simcity4_dd.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Dragon Age™: Origins - Ultimate Edition",
+    "LaunchId": "dragonage_ultimate_dd",
+    "ImageUri": "http://vikingco.de/pinorigin/dragonage_ultimate_dd.png",
+    "HasWide": true
+  },
+  {
+    "Name": "Dragon Age™ II",
+    "LaunchId": "dragonage2_dd",
+    "ImageUri": "http://vikingco.de/pinorigin/dragonage2_dd.png",
+    "HasWide": true
+  }
+]
