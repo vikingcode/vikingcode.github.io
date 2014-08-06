@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="en-au" http-equiv="Content-Language" />
+		<meta name="viewport" content="width=device-width" />
+		<title>The Wood Knight</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<style type="text/css" media="screen">
+.bar { background:#cacaca; }
+.namecol { max-width:350px;}
+		</style>
+
+		<script type='text/javascript'>
+		//<![CDATA[ 
+			$(window).load(function(){
+			$("#searchInput").keyup(function() {
+				var rows = $("#fbody").find("tr").hide();
+				var data = this.value.split(" ");
+				$.each(data, function(i, v) {
+					var r = new RegExp(v, 'i'); 
+					rows.filter(function(){ return $(this).text().match(r) }).show();
+					
+				});
+			});
+
+			});//]]>  
+
+		</script>
+	</head>
+	<body>
+		<input id="searchInput" placeholder="Type To Filter"><br/>
+	</body>
+	<script>
+	var maxWidth = 250;
+	var maxJanka = 5060;
+	var lbton = .00444822162;
+		$.getJSON( "janka.json", function( data ) {
+		  var items = [];
+		  $.each( data, function( i, item ) {
+			items.push( "<tr><td class=\"namecol\">"+ item.name + "</td><td>" + item.janka + " (" + (item.janka * lbton).toFixed(1)+")</td><td width=\"250\"> <div class=\"bar\" style=\"width:"+ item.janka / maxJanka * maxWidth +"px\">&nbsp;</div></td></tr>" );
+		  });
+		  
+		$("<table/>", {
+			html:	$( "<tbody/>", {	
+				"id" : "fbody",
+				"class": "my-new-list", 
+				html: items.join( "" ) })
+		}
+		  ).appendTo( "body" );
+		});
+		
+		
+	</script>
+</html>

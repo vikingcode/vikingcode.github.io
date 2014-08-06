@@ -1,0 +1,630 @@
+[{
+	"name" : "Australian Buloke",
+	"janka" : "5060",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Schinopsis balansae / Quebracho Colorado / Red Quebracho",
+	"janka" : "4570",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Lignum vitae / Guayacan / Pockenholz",
+	"janka" : "4500",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Patagonian Rosewood / Curupay / Angico Preto / Piptadenia Macrocarpa / Brazilian Tiger Mahogany",
+	"janka" : "3840",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Snakewood / Letterhout / Piratinera Guinensis",
+	"janka" : "3800",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Brazilian Olivewood",
+	"janka" : "3700",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Brazilian Ebony",
+	"janka" : "3692",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Grey Ironbark",
+	"janka" : "3664",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Bolivian Cherry",
+	"janka" : "3650",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Lapacho",
+	"janka" : "3640",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Ebony",
+	"janka" : "3220",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Brazilian Redwood / Paraju / Massaranduba",
+	"janka" : "3190",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Yvyraro",
+	"janka" : "3040",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Stranded/woven bamboo",
+	"janka" : "3000",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Bloodwood",
+	"janka" : "2900",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Red Mahogany, Turpentine",
+	"janka" : "2697",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Southern Chestnut",
+	"janka" : "2670",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Spotted Gum",
+	"janka" : "2473",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Brazilian Cherry / Jatoba",
+	"janka" : "2350",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Mesquite",
+	"janka" : "2345",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Golden Teak",
+	"janka" : "2330",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Santos Mahogany, Bocote, Cabreuva, Honduran Rosewood",
+	"janka" : "2200",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Pradoo",
+	"janka" : "2170",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Brazilian Koa",
+	"janka" : "2160",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Brushbox",
+	"janka" : "2135",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Osage Orange[3]",
+	"janka" : "2040",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Karri",
+	"janka" : "2030",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Sydney Blue Gum",
+	"janka" : "2023",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Bubinga",
+	"janka" : "1980",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Cameron[disambiguation needed]",
+	"janka" : "1940",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Tallowwood",
+	"janka" : "1933",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Merbau",
+	"janka" : "1925",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Amendoim",
+	"janka" : "1912",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Jarrah",
+	"janka" : "1910",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Purpleheart",
+	"janka" : "1860",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Goncalo Alves / Tigerwood",
+	"janka" : "1850",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Hickory / Pecan, Satinwood",
+	"janka" : "1820",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Afzelia / Doussie / Australian Wormy Chestnut",
+	"janka" : "1810",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Bangkirai",
+	"janka" : "1798",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Rosewood",
+	"janka" : "1780",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "African Padauk",
+	"janka" : "1725",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Blackwood",
+	"janka" : "1720",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Merbau",
+	"janka" : "1712",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Kempas",
+	"janka" : "1710",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Black Locust",
+	"janka" : "1700",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Highland Beech",
+	"janka" : "1686",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Wenge, Red Pine, Hornbeam",
+	"janka" : "1630",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Tualang",
+	"janka" : "1624",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Zebrawood",
+	"janka" : "1575",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "True Pine, Timborana",
+	"janka" : "1570",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Peroba",
+	"janka" : "1557",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Sapele / Sapelli, Kupa'y",
+	"janka" : "1510",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Curupixa",
+	"janka" : "1490",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Sweet Birch",
+	"janka" : "1470",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Hard Maple / Sugar Maple",
+	"janka" : "1450",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Caribbean Walnut",
+	"janka" : "1390",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Coffee Bean",
+	"janka" : "1390",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Natural Bamboo (represents one species)",
+	"janka" : "1380",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Australian Cypress",
+	"janka" : "1375",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "White Oak",
+	"janka" : "1360",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Tasmanian Oak",
+	"janka" : "1350",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Ribbon Gum",
+	"janka" : "1349",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Ash (White)",
+	"janka" : "1320",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "American Beech",
+	"janka" : "1300",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Red Oak (Northern)",
+	"janka" : "1290",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Caribbean Heart Pine",
+	"janka" : "1280",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Yellow Birch, Iroko",
+	"janka" : "1260",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Movingui",
+	"janka" : "1230",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Heart Pine",
+	"janka" : "1225",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Larch",
+	"janka" : "1200",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Carbonized Bamboo (represents one species)",
+	"janka" : "1180",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Teak",
+	"janka" : "1155",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Cocobolo",
+	"janka" : "1136",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Brazilian Eucalyptus / Rose Gum",
+	"janka" : "1125",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Makore",
+	"janka" : "1100",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Siberian Larch",
+	"janka" : "1100",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Peruvian Walnut",
+	"janka" : "1080",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Boreal",
+	"janka" : "1023",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Black Walnut/North American Walnut",
+	"janka" : "1010",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Cherry",
+	"janka" : "995",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Black Cherry, Imbuia",
+	"janka" : "950",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Red Maple",
+	"janka" : "950",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Boire",
+	"janka" : "940",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Paper Birch",
+	"janka" : "910",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Eastern Red Cedar",
+	"janka" : "900",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Southern Yellow Pine (Longleaf)",
+	"janka" : "870",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Lacewood, Leopardwood",
+	"janka" : "840",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "African Mahogany",
+	"janka" : "830",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Mahogany, Honduran Mahogany",
+	"janka" : "800",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Parana",
+	"janka" : "780",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Sycamore",
+	"janka" : "770",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Shedua",
+	"janka" : "710",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Silver Maple",
+	"janka" : "700",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Southern Yellow Pine (Loblolly and Shortleaf)",
+	"janka" : "690",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Douglas Fir",
+	"janka" : "660",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Western Juniper",
+	"janka" : "626",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Alder (Red)",
+	"janka" : "590",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Larch",
+	"janka" : "590",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Chestnut",
+	"janka" : "540",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Hemlock",
+	"janka" : "500",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Western White Pine",
+	"janka" : "420",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Basswood",
+	"janka" : "410",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Eastern White Pine",
+	"janka" : "380",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Balsa",
+	"janka" : "100",
+	"wooddburl" : "",
+	"colour" : ""
+},
+{
+	"name" : "Cuipo",
+	"janka" : "22",
+	"wooddburl" : "",
+	"colour" : ""
+}]
